@@ -52,10 +52,10 @@ const AppRouter = () => {
                 <Route path="/auth/register" element={<SignUp startRegister={startRegister} status={status} />} />*/}
 
                 <Route path="/categorias" element={<Categorias />} />
-                <Route path="/tov/users"  element={<Users  />} />
+                <Route path="/tov"  element={<Users  />} />
                 <Route path="/productos"  element={<Productos  />} />
 
-                <Route path="/*" element={<Navigate to="/tov/users" />} /> 
+                <Route path="/*" element={<Navigate to="/tov" />} /> 
             </Routes>
         </div>
     )
