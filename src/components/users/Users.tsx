@@ -9,7 +9,8 @@ export const Users = () => {
     const usersListCSS = {
         display: "block",
         border: "4px solid salmon",
-        padding: "10px",
+        paddingTop: "10px",
+        paddingLeft: "20px",
         width: "90%",
         marginLeft: "5%",
         marginBottom: "10px",
