@@ -10,7 +10,7 @@ export const finderExplorer=(v, colonia='')=>{
     }
 
     let UpFirstLetter = capitalizeFirstLetter(v.toLowerCase())
-console.log(UpFirstLetter)
+
 let upFirstLe = ''
 let upperCase = ''
    let lowerCase = ''

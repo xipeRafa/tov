@@ -163,8 +163,8 @@ export const Users = () => {
                     {/*<img src={el.img} width='100px' />*/}
 
                     
-{/*
-                    <button onClick={() => handleDelete(el)}>Eliminar</button>
+
+                    {/*<button onClick={() => handleDelete(el)}>Eliminar</button>
                     <button onClick={() => handleEdith(el)}>Editar</button>*/}
 
                     {/*<button onClick={() => handleSwitch(el)}>Toggle</button>*/}
