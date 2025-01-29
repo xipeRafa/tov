@@ -121,6 +121,22 @@ export const Users = () => {
 
 </div>
 
+<div style={{width:'100%', textAlign:'center'}}>
+            <input type="button" value='Domicilios Particulares' className='form-control col-12 my-4 mx-auto' 
+                    style={{width:'90%'}} placeholder='Buscar por Colonias...' 
+                    onClick={(e)=> usersFinder('particular')} 
+            />
+
+</div>
+
+<div style={{width:'100%', textAlign:'center'}}>
+            <input type="button" value='Ver Todos Los Talleres' className='form-control col-12 my-4 mx-auto' 
+                    style={{width:'90%'}} placeholder='Buscar por Colonias...' 
+                    onClick={(e)=> usersFinder(' ')} 
+            />
+
+</div>
+
 {/*
             {users?.usuarios?.length < 3 &&  
                 <div className='mx-5 my-4'>
