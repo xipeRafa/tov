@@ -164,9 +164,9 @@ export const Users = () => {
 
                     
 
-                    {/*<button onClick={() => handleDelete(el)}>Eliminar</button>
-                    <button onClick={() => handleEdith(el)}>Editar</button>*/}
-
+               {/*     <button onClick={() => handleDelete(el)}>Eliminar</button>
+                    <button onClick={() => handleEdith(el)}>Editar</button>
+*/}
                     {/*<button onClick={() => handleSwitch(el)}>Toggle</button>*/}
                     {/*<input type="file" id="file-upload" onChange={(e) => uploadUserImg(el.uid, e.target.files[0])} />*/}
 
