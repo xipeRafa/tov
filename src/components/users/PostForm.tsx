@@ -8,13 +8,13 @@ import { useForm } from '../../helpers';
 export const PostForm = ({ postUser, editMode, newDataEdit, defaultModeEdith }) => {
 
     const[name2, setName2]=useState({
-        lugar:'',calle:'',colonia:'',dia:'',hora:'',informes:'',fechaDeInicio:''
+        lugar:'',calle:'',colonia:'',dia:'',hora:'',informes:'',fechaDeInicio:'',para:''
     })
 
 
 
 
-    const { lugar,calle,colonia,dia,hora,informes,fechaDeInicio, onInputChange: onPostInputChange, onResetForm } = useForm(name2);
+    const { lugar,calle,colonia,dia,hora,informes,fechaDeInicio,para, onInputChange: onPostInputChange, onResetForm } = useForm(name2);
 
   
 // console.log('dia:', fechaDeInicio.slice(-2), 'mes:', fechaDeInicio.slice(5,7), 'Año:', fechaDeInicio.slice(0,4))
@@ -54,8 +54,8 @@ function obtenerMes(n) {
 
      useEffect(() => { 
         if(editMode !== undefined) {
-            const { lugar,calle,colonia,dia,hora,informes,fechaDeInicio } = editMode
-            setName2({lugar,calle,colonia,dia,hora,informes,fechaDeInicio:FI})
+            const { lugar,calle,colonia,dia,hora,informes,fechaDeInicio,para } = editMode
+            setName2({lugar,calle,colonia,dia,hora,informes,fechaDeInicio:FI,para})
         }
     }, [editMode]) 
 
@@ -65,10 +65,10 @@ function obtenerMes(n) {
         event.preventDefault();
 
         if(editMode){
-            newDataEdit(lugar,calle,colonia,dia,hora,informes,FI, editMode.uid)
-            setName2({lugar:'',calle:'',colonia:'',dia:'',hora:'',informes:'',fechaDeInicio:''})
+            newDataEdit(lugar,calle,colonia,dia,hora,informes,FI,para, editMode.uid)
+            setName2({lugar:'',calle:'',colonia:'',dia:'',hora:'',informes:'', fechaDeInicio:'',para:''})
         }else{
-            postUser({lugar,calle,colonia,dia,hora,informes,fechaDeInicio:FI})
+            postUser({lugar,calle,colonia,dia,hora,informes,fechaDeInicio:FI,para})
         }
 
         onResetForm()
@@ -78,7 +78,7 @@ function obtenerMes(n) {
     
     const handleCancelEdit =()=>{
         defaultModeEdith()
-        setName2({lugar:'',calle:'',colonia:'',dia:'',hora:'',informes:'',fechaDeInicio:''})
+        setName2({lugar:'',calle:'',colonia:'',dia:'',hora:'',informes:'',fechaDeInicio:'',para:''})
     }
 
   
@@ -166,7 +166,19 @@ function obtenerMes(n) {
                         onChange={onPostInputChange}
                     />
                 </div>
-                
+               
+
+               <div className="form-group mb-2">
+                    <select 
+                        className="form-control"  
+                        name="para"
+                        onChange={onPostInputChange}>
+                        <option>Para:</option>
+                        <option value="Adultos">Adultos</option>
+                        <option value="Matrimonios">Matrimonios</option>
+                        <option value="Jovenes">Jovenes</option>
+                    </select>
+                </div> 
 
 
 

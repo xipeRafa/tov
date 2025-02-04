@@ -100,7 +100,7 @@ export const Users = () => {
 
 
 
-            {/*<PostForm postUser={postUser} editMode={editMode} newDataEdit={newDataEdit} defaultModeEdith={defaultModeEdith} />*/}
+            <PostForm postUser={postUser} editMode={editMode} newDataEdit={newDataEdit} defaultModeEdith={defaultModeEdith} />
 
 
 
@@ -123,19 +123,54 @@ export const Users = () => {
 
 <div style={{width:'100%', textAlign:'center'}}>
             <input type="button" value='Domicilios Particulares' className='form-control col-12 my-4 mx-auto' 
-                    style={{width:'90%'}} placeholder='Buscar por Colonias...' 
+                    style={{width:'90%'}}  
                     onClick={(e)=> usersFinder('particular')} 
             />
 
 </div>
 
+
+
+
+<div style={{width:'100%', textAlign:'center'}}>
+            <input type="button" value='Jovenes' className='form-control col-12 my-4 mx-auto' 
+                    style={{width:'90%'}}  
+                    onClick={(e)=> usersFinder('jovenes', 'Jovenes')} 
+            />
+
+</div>
+
+
+
+
+<div style={{width:'100%', textAlign:'center'}}>
+            <input type="button" value='Matrimonios' className='form-control col-12 my-4 mx-auto' 
+                    style={{width:'90%'}}  
+                    onClick={(e)=> usersFinder('matrimonios', 'Matrimonios')} 
+            />
+
+</div>
+
+
+
+
+
+
 <div style={{width:'100%', textAlign:'center'}}>
             <input type="button" value='Ver Todos Los Talleres' className='form-control col-12 my-4 mx-auto' 
-                    style={{width:'90%'}} placeholder='Buscar por Colonias...' 
+                    style={{width:'90%'}}  
                     onClick={(e)=> usersFinder(' ')} 
             />
 
 </div>
+
+
+
+
+
+
+
+
 
 {/*
             {users?.usuarios?.length < 3 &&  
@@ -174,15 +209,17 @@ export const Users = () => {
 
                     <p><span style={usersListCSS2}>Hora:</span>  {el.hora }</p>
                     <p><span style={usersListCSS2}>Inicio:</span> {el.fechaDeInicio} </p>
+                    <p><span style={usersListCSS2}>Para:</span> {el.para || 'Adultos' }</p>
                     <p><span style={usersListCSS2}>Informes:</span> {el.informes }</p>
+
 
                     {/*<img src={el.img} width='100px' />*/}
 
                     
 
-               {/*     <button onClick={() => handleDelete(el)}>Eliminar</button>
+                    <button onClick={() => handleDelete(el)}>Eliminar</button>
                     <button onClick={() => handleEdith(el)}>Editar</button>
-*/}
+
                     {/*<button onClick={() => handleSwitch(el)}>Toggle</button>*/}
                     {/*<input type="file" id="file-upload" onChange={(e) => uploadUserImg(el.uid, e.target.files[0])} />*/}
 
