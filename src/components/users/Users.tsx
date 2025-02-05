@@ -4,6 +4,7 @@ import { PostForm } from './PostForm';
 import { useUsers } from '../../hooks'
 import logo from '../../assets/logo.png'
 
+
 export const Users = () => {
 
     const usersListCSS = {
@@ -122,8 +123,7 @@ export const Users = () => {
 </div>
 
 <div style={{width:'100%', textAlign:'center'}}>
-            <input type="button" value='Domicilios Particulares' className='form-control col-12 my-4 mx-auto' 
-                    style={{width:'90%'}}  
+            <input type="button" value='Domicilios Particulares'  
                     onClick={(e)=> usersFinder('particular')} 
             />
 
@@ -133,7 +133,7 @@ export const Users = () => {
 
 
 <div style={{width:'100%', textAlign:'center'}}>
-            <input type="button" value='Jovenes' className='form-control col-12 my-4 mx-auto' 
+            <input type="button" value='Jovenes'  
                     style={{width:'90%'}}  
                     onClick={(e)=> usersFinder('jovenes', 'Jovenes')} 
             />
@@ -144,7 +144,7 @@ export const Users = () => {
 
 
 <div style={{width:'100%', textAlign:'center'}}>
-            <input type="button" value='Matrimonios' className='form-control col-12 my-4 mx-auto' 
+            <input type="button" value='Matrimonios'
                     style={{width:'90%'}}  
                     onClick={(e)=> usersFinder('matrimonios', 'Matrimonios')} 
             />
@@ -157,11 +157,7 @@ export const Users = () => {
 
 
 <div style={{width:'100%', textAlign:'center'}}>
-            <input type="button" value='Ver Todos Los Talleres' className='form-control col-12 my-4 mx-auto' 
-                    style={{width:'90%'}}  
-                    onClick={(e)=> usersFinder(' ')} 
-            />
-
+            <input type="button" value='Ver Todos Los Talleres' onClick={(e)=> usersFinder(' ')} />
 </div>
 
 
