@@ -155,7 +155,8 @@ input[type="button"]{
     border: 1px solid #ccc;
     border-radius: 8px;
     height: 38px;
-    box-shadow: rgba(33, 67, 180, .2) 0px -50px 26px -38px inset;
+/*    box-shadow: rgba(33, 67, 180, .2) 0px -50px 26px -38px inset;*/
+box-shadow: rgba(33, 67, 130, .3) 0px -50px 26px -38px inset;
     text-transform: uppercase;
     color: rgba(0,0,0, .7);
     color: rgba(33, 67, 90);
